@@ -103,10 +103,10 @@ const Pagination: React.FC<PaginationProps> = (props) => {
     );
   }
 
-  const jumpPrevPage = Math.max(1, current - (showLessItems ? 3 : 5));
+  const jumpPrevPage = Math.max(1, current - (showLessItems ? 3 : 8));
   const jumpNextPage = Math.min(
     calculatePage(undefined, pageSize, total),
-    current + (showLessItems ? 3 : 5),
+    current + (showLessItems ? 3 : 8),
   );
 
   function getItemIcon(
