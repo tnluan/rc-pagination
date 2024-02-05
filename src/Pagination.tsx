@@ -103,10 +103,10 @@ const Pagination: React.FC<PaginationProps> = (props) => {
     );
   }
 
-  const jumpPrevPage = Math.max(1, current - (showLessItems ? 3 : 8));
+  const jumpPrevPage = Math.max(1, current - (showLessItems ? 3 : 5));
   const jumpNextPage = Math.min(
     calculatePage(undefined, pageSize, total),
-    current + (showLessItems ? 3 : 8),
+    current + (showLessItems ? 3 : 5),
   );
 
   function getItemIcon(
@@ -396,7 +396,7 @@ const Pagination: React.FC<PaginationProps> = (props) => {
   }
 
   // ====================== Normal ======================
-  const pageBufferSize = showLessItems ? 1 : 2;
+  const pageBufferSize = showLessItems ? 1 : 5;
   if (allPages <= 3 + pageBufferSize * 2) {
     if (!allPages) {
       pagerList.push(
